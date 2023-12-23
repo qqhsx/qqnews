@@ -21,12 +21,12 @@ jobs:
         run: |
           git config --local user.email "378600950@qq.com"
           git config --local user.name "qqhsx"
-          git remote set-url origin https://${{ github.actor }}:${{ secrets.QQNEWS_TOKEN }}@github.com/${{ github.repository }}
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           pip3 install requests
           pip3 install bs4
           pip3 install html2text
           python qq.py
           git add .
-          git commit --allow-empty -m "spide"
+          git commit --allow-empty -m "spider"
           git push -f
