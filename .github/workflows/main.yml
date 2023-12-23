@@ -1,0 +1,32 @@
+name: qqnews
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkoutss
+        uses: actions/checkout@v2
+
+      - name: instpython3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11.0'
+      - name: Commit files
+        run: |
+          git config --local user.email "378600950@qq.com"
+          git config --local user.name "qqhsx"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git pull --rebase
+          pip3 install requests
+          pip3 install bs4
+          pip3 install html2text
+          python qq.py
+          git add .
+          git commit --allow-empty -m "spider"
+          git push -f
