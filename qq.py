@@ -86,6 +86,10 @@ def process_article(title, url):
         # Fix image links and newline characters in Markdown file
         ss = patch_fix_image_links(ss, img_dir, title)
 
+        # Ensure the output directory exists
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
         output_file = os.path.join(output_dir, f"{title}.md")
         if os.path.exists(output_file):
             logging.info(f"EXIST\n{title}\n{url}\n")
@@ -96,6 +100,7 @@ def process_article(title, url):
         logging.info(f"SUCCESS\n{title}\n{url}\n")
     except Exception as e:
         logging.error(f"ERROR\n{title}\n{url}\n{e.args}\n======\n{traceback.format_exc()}\n")
+
 
 def main():
     starttime = time.time()
