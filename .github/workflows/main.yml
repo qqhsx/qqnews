@@ -1,55 +1,34 @@
 name: qqnews
 
-
 on:
   push:
     branches:
       - main
-
   schedule:
     - cron: "0 * * * *"
 
 jobs:
   run-python-script:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
-
         uses: actions/checkout@v2
 
-
       - name: Set up Python
-
         uses: actions/setup-python@v2
-
         with:
           python-version: '3.11.0'
-
-      - name: Install dependencies
-
-        run: |
-          pip3 install requests
-
-          pip3 install bs4
-
-          pip3 install html2text
-
-
-      - name: Run Crawler
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          IMAGE_REPO_TOKEN: ${{ secrets.IMAGE_REPO_TOKEN }}
+          
+      - name: Commit files
         run: |
           git config --local user.email "378600950@qq.com"
           git config --local user.name "qqhsx"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git pull --rebase
+          pip3 install requests
+          pip3 install bs4
+          pip3 install html2text
           python qq.py
-
-
-      - name: Commit and Push Changes
-
-        run: |
+          # python index_generator.py
           git add .
           git commit --allow-empty -m "spider"
-          git push -f
