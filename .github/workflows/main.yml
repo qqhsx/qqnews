@@ -38,6 +38,7 @@ jobs:
           python qq.py
           # python index_generator.py
           git add .
+          ls -l
           git commit --allow-empty -m "spider"
           git push -f
 
