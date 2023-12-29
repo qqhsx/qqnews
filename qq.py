@@ -9,11 +9,37 @@ import re
 import logging
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
+import subprocess
 
 logging.basicConfig(filename='news_crawler.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def sanitize_filename(filename):
     return "".join([c for c in filename if c.isalpha() or c.isdigit() or c in (' ','.','_')]).rstrip('. \t\n')
+
+def push_image_to_repo(file_path, repo_name, repo_owner, branch='main', commit_message='Add new image'):
+    access_token = os.getenv('IMAGE_REPO_TOKEN')  # 确保在GitHub Actions secrets中设置了IMAGE_REPO_TOKEN
+
+    if access_token is None:
+        raise ValueError("You must provide a Github access token in the environment variable 'IMAGE_REPO_TOKEN'")
+    
+    subprocess.run(["git", "config", "--global", "user.email", "you@example.com"], check=True)
+    subprocess.run(["git", "config", "--global", "user.name", "Your Name"], check=True)
+    
+    # 克隆目标仓库，如果已经克隆了就跳过
+
+    if not os.path.isdir(repo_name):
+        subprocess.run(["git", "clone", f"https://{repo_owner}:{access_token}@github.com/{repo_owner}/{repo_name}.git"], check=True)
+    
+    # 复制文件到仓库并提交
+
+    subprocess.run(["cp", file_path, f'{repo_name}/'], check=True)
+    commit_cmds = [
+        f"git -C {repo_name} add .",
+        f"git -C {repo_name} commit -m '{commit_message}'",
+        f"git -C {repo_name} push origin {branch}"
+    ]
+    for cmd in commit_cmds:
+        subprocess.run(cmd, shell=True, check=True)
 
 def download_image(url, output_dir, filename, retries=3, repo_name='qqnews_image', repo_owner='qqhsx'):
     for i in range(retries):
