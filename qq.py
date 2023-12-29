@@ -1,74 +1,47 @@
 import requests
-
 import os
-
 import time
-
+import html2text
+import sys
+import traceback
+from bs4 import BeautifulSoup as bs
+import re
 import logging
-
 from concurrent.futures import ThreadPoolExecutor
-
 import hashlib
-
 import subprocess
-
 
 logging.basicConfig(filename='news_crawler.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def sanitize_filename(filename):
-    return "".join([c for c in filename if c.isalpha() or c.isdigit() or c in (' ','.','_')]).rstrip('.')
+    return "".join([c for c in filename if c.isalpha() or c.isdigit() or c in (' ','.','_')]).rstrip('. \t\n')
 
-def remove_image_from_aa(file_path):
-    if os.path.isfile(file_path):
-        os.remove(file_path)
-        logging.info(f"Removed image from 'aa' repository: {file_path}")
-    else:
-        logging.error(f"File not found in 'aa' repository: {file_path}")
-
-def push_image_to_repo(file_path, output_dir, repo_name, repo_owner, branch='main', commit_message='Add new image'):
-    access_token = os.getenv('IMAGE_REPO_TOKEN')  # 确保在Github Actions secrets中设置了IMAGE_REPO_TOKEN
+def push_image_to_repo(file_path, repo_name, repo_owner, branch='main', commit_message='Add new image'):
+    access_token = os.getenv('IMAGE_REPO_TOKEN')  # 确保在GitHub Actions secrets中设置了IMAGE_REPO_TOKEN
 
     if access_token is None:
         raise ValueError("You must provide a Github access token in the environment variable 'IMAGE_REPO_TOKEN'")
     
+    subprocess.run(["git", "config", "--global", "user.email", "you@example.com"], check=True)
+    subprocess.run(["git", "config", "--global", "user.name", "Your Name"], check=True)
+    
     # 克隆目标仓库，如果已经克隆了就跳过
 
     if not os.path.isdir(repo_name):
-        clone_cmd = [
-            "git", "clone", 
-            f"https://{access_token}@github.com/{repo_owner}/{repo_name}.git"
-        ]
-        subprocess.run(clone_cmd, check=True)
+        subprocess.run(["git", "clone", f"https://{repo_owner}:{access_token}@github.com/{repo_owner}/{repo_name}.git"], check=True)
     
-    # 将图片复制到仓库的相应目录
+    # 复制文件到仓库并提交
 
-    repo_output_dir = os.path.join(repo_name, output_dir.strip('./'))  # strip leading './' from output_dir
-
-    os.makedirs(repo_output_dir, exist_ok=True)
-    subprocess.run(["cp", file_path, repo_output_dir], check=True)
-    
-    # 添加图片到git库中
-
-    add_cmd = [
-        "git", "-C", repo_name, "add", "."
+    subprocess.run(["cp", file_path, f'{repo_name}/'], check=True)
+    commit_cmds = [
+        f"git -C {repo_name} add .",
+        f"git -C {repo_name} commit -m '{commit_message}'",
+        f"git -C {repo_name} push origin {branch}"
     ]
-    commit_cmd = [
-        "git", "-C", repo_name, "commit", "-m", commit_message
+    for cmd in commit_cmds:
+        subprocess.run(cmd, shell=True, check=True)
 
-    ]
-    push_cmd = [
-        "git", "-C", repo_name, "push", "origin", branch
-
-    ]
-    
-    for cmd in [add_cmd, commit_cmd, push_cmd]:
-        subprocess.run(cmd, check=True)
-        
-    # 清理图片，删除aa仓库中的图片
-
-    remove_image_from_aa(file_path)
-
-def download_image(url, output_dir, filename, repo_name='qqnews_image', repo_owner='qqhsx', retries=3):
+def download_image(url, output_dir, filename, retries=3, repo_name='qqnews_image', repo_owner='qqhsx'):
     for i in range(retries):
         try:
             response = requests.get(url)
@@ -78,12 +51,10 @@ def download_image(url, output_dir, filename, repo_name='qqnews_image', repo_own
                 output_path = os.path.join(output_dir, filename)
                 with open(output_path, "wb") as f:
                     f.write(response.content)
-                
-                # 在这里调用新函数把图片推送到'qqnews_image'仓库
+                # 在这里调用新函数把图片推送到你的新仓库
 
-                push_image_to_repo(output_path, output_dir, repo_name, repo_owner)
-
-                return output_path
+                push_image_to_repo(output_path, repo_name, repo_owner)
+                return filename
 
             else:
                 logging.error(f"Failed to download image: {url}")
@@ -91,7 +62,7 @@ def download_image(url, output_dir, filename, repo_name='qqnews_image', repo_own
             logging.error(f"Error occurred while downloading image: {url}\n{e}")
             if i < retries - 1:  # i is zero indexed
 
-                logging.info(f"Retrying...({i+1}/{retries})")
+                logging.info(f"Retrying...({i+1})")
                 time.sleep(2)  # wait for 2 seconds before retrying
 
             else:
