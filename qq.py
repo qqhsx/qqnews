@@ -9,7 +9,6 @@ import re
 import logging
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
-import subprocess
 
 logging.basicConfig(filename='news_crawler.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -69,7 +68,7 @@ def process_article(title, url):
         year = time.strftime('%Y')
         month = time.strftime('%m')
         day = time.strftime('%d')
-        output_dir = os.path.join('/home/runner/images', year, month, day)
+        output_dir = os.path.join(sys.path[0], year, month, day)
         img_dir = os.path.join(output_dir, title)
 
         if not os.path.exists(img_dir):
@@ -110,19 +109,6 @@ def main():
             executor.submit(process_article, item[0], item[1])
 
     print(f"Total time taken: {time.time() - starttime} seconds")
-    # Push changes to GitHub
-    subprocess.check_call(['git', 'init'], cwd='/home/runner/images')
-    subprocess.check_call(['git', 'config', '--global', 'user.email', '378600950@qq.com'], cwd='/home/runner/images')
-    subprocess.check_call(['git', 'config', '--global', 'user.name', 'qqhsx'], cwd='/home/runner/images')
-    subprocess.check_call(['git', 'remote', 'add', 'origin', 'https://github.com/qqhsx/qqnews_image.git'], cwd='/home/runner/images')
-    subprocess.check_call(['git', 'add', '.'], cwd='/home/runner/images')
-    subprocess.check_call(['git', 'commit', '-m', '"Add images"'], cwd='/home/runner/images')
-    # Use GitHub token for authentication
-    token = os.environ['QQNEWS_TOKEN']
-    subprocess.check_call(['git', 'remote', 'set-url', 'origin', f'https://qqhsx:{token}@github.com/qqhsx/qqnews_image.git'], cwd='/home/runner/images')
-    subprocess.check_call(['git', 'push', '-u', 'origin', 'master'], cwd='/home/runner/images')
-
-
 
 if __name__ == '__main__':
     main()
