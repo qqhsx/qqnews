@@ -12,12 +12,6 @@ import hashlib
 
 logging.basicConfig(filename='news_crawler.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def clean_filename(filename):
-    invalid_chars = "/:*?\"<>|"
-    for char in invalid_chars:
-        filename = filename.replace(char, "")
-    return filename
-
 def download_image(url, output_dir, filename):
     try:
         response = requests.get(url)
@@ -62,6 +56,9 @@ def patch_fix_image_links(text, output_dir, title):
 
 def process_article(title, url):
     try:
+        # 移除标题末尾的 "."
+        title = title.rstrip('.')
+
         tmphtml = requests.get(url).text
         tmpbs = bs(tmphtml, "html.parser")
         ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
@@ -75,10 +72,6 @@ def process_article(title, url):
         month = time.strftime('%m')
         day = time.strftime('%d')
         output_dir = os.path.join(sys.path[0], year, month, day)
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-
-        title = clean_filename(title)
         img_dir = os.path.join("qqnews_image", title)
 
         if not os.path.exists(img_dir):
