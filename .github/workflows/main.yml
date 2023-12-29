@@ -18,28 +18,18 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.11.0'
-
-      - name: Cache Python dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
+          
       - name: Commit files
         run: |
-          git config --local user.email "${{ secrets.GIT_EMAIL }}"
-          git config --local user.name "${{ secrets.GIT_NAME }}"
-          git remote set-url origin https://${{ github.actor }}:${{ secrets.QQNEWS_TOKEN }}@github.com/${{ github.repository }}
+          git config --local user.email "378600950@qq.com"
+          git config --local user.name "qqhsx"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
+          pip3 install requests
+          pip3 install bs4
+          pip3 install html2text
           python qq.py
+          # python index_generator.py
           git add .
           git commit --allow-empty -m "spider"
-          git push
-        env:
-          GIT_EMAIL: 378600950@qq.com
-          GIT_NAME: qqhsx
+          git push -f
