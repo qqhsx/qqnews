@@ -110,7 +110,6 @@ def main():
             executor.submit(process_article, item[0], item[1])
 
     print(f"Total time taken: {time.time() - starttime} seconds")
-
     # Push changes to GitHub
     subprocess.check_call(['git', 'init'], cwd='/home/runner/images')
     subprocess.check_call(['git', 'config', '--global', 'user.email', '378600950@qq.com'], cwd='/home/runner/images')
@@ -118,7 +117,9 @@ def main():
     subprocess.check_call(['git', 'remote', 'add', 'origin', 'https://github.com/qqhsx/qqnews_image.git'], cwd='/home/runner/images')
     subprocess.check_call(['git', 'add', '.'], cwd='/home/runner/images')
     subprocess.check_call(['git', 'commit', '-m', '"Add images"'], cwd='/home/runner/images')
-    subprocess.check_call(['git', 'push', '-u', 'origin', 'master'], cwd='/home/runner/images')
+    # Use GitHub token for authentication
+    token = os.environ['GITHUB_TOKEN']
+    subprocess.check_call(['git', 'push', '-u', 'origin', 'master'], cwd='/home/runner/images', env={'GITHUB_TOKEN': token})
 
 if __name__ == '__main__':
     main()
