@@ -12,18 +12,24 @@ import hashlib
 
 logging.basicConfig(filename='news_crawler.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def download_image(url, output_dir, filename):
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            output_path = os.path.join(output_dir, filename)
-            with open(output_path, "wb") as f:
-                f.write(response.content)
-            return filename
-        else:
-            logging.error(f"Failed to download image: {url}")
-    except Exception as e:
-        logging.error(f"Error occurred while downloading image: {url}\n{e}")
+def download_image(url, output_dir, filename, retries=3):
+    for i in range(retries):
+        try:
+            response = requests.get(url)
+            if response.status_code == 200:
+                output_path = os.path.join(output_dir, filename)
+                with open(output_path, "wb") as f:
+                    f.write(response.content)
+                return filename
+            else:
+                logging.error(f"Failed to download image: {url}")
+        except Exception as e:
+            logging.error(f"Error occurred while downloading image: {url}\n{e}")
+            if i < retries - 1:  # i is zero indexed
+                logging.info(f"Retrying...({i+1})")
+                time.sleep(2)  # wait for 2 seconds before retrying
+            else:
+                logging.error(f"Failed to download image after {retries} attempts.")
     return None
 
 def patch_fix_image_links(text, output_dir, title):
@@ -41,12 +47,12 @@ def patch_fix_image_links(text, output_dir, title):
         # 下载图片到指定目录
         img_url = re.search(r'\((.*?)\)', fixed_img_link).group(1)
         filename = f"{hashlib.md5(img_url.encode()).hexdigest()}.jpg"
-        download_image(img_url, output_dir, filename)
+        downloaded_filename = download_image(img_url, output_dir, filename, retries=3)
 
-        if filename:
+        if downloaded_filename:
             # 用相对路径替换图像链接
-            relative_path = f"https://raw.githubusercontent.com/qqhsx/qqnews_image/main/{title}/{filename}"
-            text = text.replace(fixed_img_link, f"![{filename}]({relative_path})")
+            relative_path = f"https://raw.githubusercontent.com/qqhsx/qqnews_image/main/{title}/{downloaded_filename}"
+            text = text.replace(fixed_img_link, f"![{downloaded_filename}]({relative_path})")
 
     # 修复链接和文本显示在同行上的问题
     text = re.sub(r'(!\[[^\]]*\]\([^)]*\))(\n{1,2})?', r'\1\n\n', text)
