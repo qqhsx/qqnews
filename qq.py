@@ -11,60 +11,20 @@ from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import subprocess
 
-
 logging.basicConfig(filename='news_crawler.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def push_image_to_repo(file_path, repo_name, repo_owner, branch='main', commit_message='Add new image'):
-    access_token = os.getenv('IMAGE_REPO_TOKEN')  # 确保在GitHub Actions secrets中设置了IMAGE_REPO_TOKEN
-
-    if access_token is None:
-        raise ValueError("You must provide a Github access token in the environment variable 'IMAGE_REPO_TOKEN'")
-    
-    subprocess.run(["git", "config", "--global", "user.email", "you@example.com"], check=True)
-    subprocess.run(["git", "config", "--global", "user.name", "Your Name"], check=True)
-    
-    # 克隆目标仓库，如果已经克隆了就跳过
-
-    if not os.path.isdir(repo_name):
-        subprocess.run(["git", "clone", f"https://{repo_owner}:{access_token}@github.com/{repo_owner}/{repo_name}.git"], check=True)
-    
-    # 复制文件到仓库并提交
-
-    subprocess.run(["cp", file_path, f'{repo_name}/'], check=True)
-    commit_cmds = [
-        f"git -C {repo_name} add .",
-        f"git -C {repo_name} commit -m '{commit_message}'",
-        f"git -C {repo_name} push origin {branch}"
-    ]
-    for cmd in commit_cmds:
-        subprocess.run(cmd, shell=True, check=True)
-
-def download_image(url, output_dir, filename, retries=3, repo_name='qqnews_image', repo_owner='qqhsx'):
-    for i in range(retries):
-        try:
-            response = requests.get(url)
-            if response.status_code == 200:
-                if not os.path.exists(output_dir):
-                    os.makedirs(output_dir)
-                output_path = os.path.join(output_dir, filename)
-                with open(output_path, "wb") as f:
-                    f.write(response.content)
-                # 在这里调用新函数把图片推送到你的新仓库
-
-                push_image_to_repo(output_path, repo_name, repo_owner)
-                return filename
-
-            else:
-                logging.error(f"Failed to download image: {url}")
-        except Exception as e:
-            logging.error(f"Error occurred while downloading image: {url}\n{e}")
-            if i < retries - 1:  # i is zero indexed
-
-                logging.info(f"Retrying...({i+1})")
-                time.sleep(2)  # wait for 2 seconds before retrying
-
-            else:
-                logging.error(f"Failed to download image after {retries} attempts.")
+def download_image(url, output_dir, filename):
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            output_path = os.path.join(output_dir, filename)
+            with open(output_path, "wb") as f:
+                f.write(response.content)
+            return filename
+        else:
+            logging.error(f"Failed to download image: {url}")
+    except Exception as e:
+        logging.error(f"Error occurred while downloading image: {url}\n{e}")
     return None
 
 def patch_fix_image_links(text, output_dir, title):
@@ -109,7 +69,7 @@ def process_article(title, url):
         year = time.strftime('%Y')
         month = time.strftime('%m')
         day = time.strftime('%d')
-        output_dir = os.path.join(sys.path[0], year, month, day)
+        output_dir = os.path.join('/home/runner/images', year, month, day)
         img_dir = os.path.join(output_dir, title)
 
         if not os.path.exists(img_dir):
@@ -150,6 +110,15 @@ def main():
             executor.submit(process_article, item[0], item[1])
 
     print(f"Total time taken: {time.time() - starttime} seconds")
+
+    # Push changes to GitHub
+    subprocess.check_call(['git', 'init'], cwd='/home/runner/images')
+    subprocess.check_call(['git', 'config', '--global', 'user.email', '378600950@qq.com'], cwd='/home/runner/images')
+    subprocess.check_call(['git', 'config', '--global', 'user.name', 'qqhsx'], cwd='/home/runner/images')
+    subprocess.check_call(['git', 'remote', 'add', 'origin', 'https://github.com/qqhsx/qqnews_image.git'], cwd='/home/runner/images')
+    subprocess.check_call(['git', 'add', '.'], cwd='/home/runner/images')
+    subprocess.check_call(['git', 'commit', '-m', '"Add images"'], cwd='/home/runner/images')
+    subprocess.check_call(['git', 'push', '-u', 'origin', 'master'], cwd='/home/runner/images')
 
 if __name__ == '__main__':
     main()
