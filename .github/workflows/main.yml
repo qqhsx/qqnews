@@ -32,3 +32,4 @@ jobs:
           # python index_generator.py
           git add .
           git commit --allow-empty -m "spider"
+          git push -f
