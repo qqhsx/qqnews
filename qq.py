@@ -10,9 +10,6 @@ import logging
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
 
-# 定义你的仓库名称
-repo_name = 'aa'
-
 logging.basicConfig(filename='news_crawler.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def download_image(url, output_dir, filename):
@@ -71,7 +68,7 @@ def process_article(title, url):
         year = time.strftime('%Y')
         month = time.strftime('%m')
         day = time.strftime('%d')
-        output_dir = os.path.join(sys.path[0], repo_name, year, month, day)
+        output_dir = os.path.join(sys.path[0], year, month, day)
         img_dir = os.path.join("qqnews_image", title)
 
         if not os.path.exists(img_dir):
