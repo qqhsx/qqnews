@@ -14,12 +14,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Checkout qqnews_image repository
+        uses: actions/checkout@v2
+        with:
+          repository: qqhsx/qqnews_image
+          token: ${{ secrets.QQNEWS_IMAGE_TOKEN }}
+          path: ./qqnews_image
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.11.0'
-          
-      - name: Commit files
+
+      - name: Install dependencies and run script
         run: |
           git config --local user.email "378600950@qq.com"
           git config --local user.name "qqhsx"
@@ -33,3 +40,12 @@ jobs:
           git add .
           git commit --allow-empty -m "spider"
           git push -f
+
+      - name: Push images to qqnews_image repository
+        run: |
+          cd qqnews_image
+          git config --local user.email "378600950@qq.com"
+          git config --local user.name "qqhsx"
+          git add .
+          git commit --allow-empty -m "Add images"
+          git push
