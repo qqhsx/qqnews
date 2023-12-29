@@ -9,7 +9,6 @@ import re
 import logging
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
-import subprocess
 
 logging.basicConfig(filename='news_crawler.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
