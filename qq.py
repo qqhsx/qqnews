@@ -118,8 +118,8 @@ def main():
     subprocess.check_call(['git', 'add', '.'], cwd='/home/runner/images')
     subprocess.check_call(['git', 'commit', '-m', '"Add images"'], cwd='/home/runner/images')
     # Use GitHub token for authentication
-    token = os.environ['GITHUB_TOKEN']
-    subprocess.check_call(['git', 'push', '-u', 'origin', 'master'], cwd='/home/runner/images', env={'GITHUB_TOKEN': token})
+    token = os.environ['QQNEWS_TOKEN']
+    subprocess.check_call(['git', 'push', '-u', 'origin', 'master'], cwd='/home/runner/images', env={'QQNEWS_TOKEN': token})
 
 if __name__ == '__main__':
     main()
