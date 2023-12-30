@@ -13,10 +13,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
+        with:
+          fetch-depth: 1
+        
       - name: Checkout qqnews_image repository
         uses: actions/checkout@v2
         with:
+          fetch-depth: 1
           repository: qqhsx/qqnews_image
           token: ${{ secrets.QQNEWS_IMAGE_TOKEN }}
           path: ./qqnews_image
