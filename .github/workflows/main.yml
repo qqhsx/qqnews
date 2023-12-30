@@ -40,7 +40,7 @@ jobs:
           git add .
           ls -l
           git commit --allow-empty -m "spider"
-          git push -f
+          # git push -f
 
       - name: Push images to qqnews_image repository
         run: |
