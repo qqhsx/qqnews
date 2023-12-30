@@ -41,6 +41,8 @@ jobs:
 
       - name: Run script
         run: python qq.py
+
+      - name: Generate index page
         run: python index_generator.py
 
       - name: Commit changes
