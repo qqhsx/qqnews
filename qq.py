@@ -54,7 +54,10 @@ def patch_fix_image_links(text, output_dir, title):
 
         if downloaded_filename:
             # 用相对路径替换图像链接
-            relative_path = f"https://raw.githubusercontent.com/qqhsx/qqnews_image/main/{title}/{downloaded_filename}"
+            year = time.strftime('%Y')
+            month = time.strftime('%m')
+            day = time.strftime('%d')
+            relative_path = f"https://raw.githubusercontent.com/qqhsx/qqnews_image/main/{year}/{month}/{day}/{title}/{downloaded_filename}"
             text = text.replace(fixed_img_link, f"![{downloaded_filename}]({relative_path})")
 
     # 修复链接和文本显示在同行上的问题
@@ -62,6 +65,7 @@ def patch_fix_image_links(text, output_dir, title):
     text = re.sub(r'(!\[[^\]]*\]\([^)]*\))(.)', r'\1\n\n\2', text)
 
     return text
+
 
 def process_article(title, url):
     try:
@@ -81,7 +85,7 @@ def process_article(title, url):
         month = time.strftime('%m')
         day = time.strftime('%d')
         output_dir = os.path.join(sys.path[0], year, month, day)
-        img_dir = os.path.join("qqnews_image", sanitize_filename(title))
+        img_dir = os.path.join("qqnews_image", year, month, day, title)
 
         if not os.path.exists(img_dir):
             os.makedirs(img_dir)
