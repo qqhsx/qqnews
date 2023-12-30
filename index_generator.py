@@ -15,7 +15,10 @@ def generate_index_page(root_dir):
                 if len(dir_parts) >= 3:
                     year, month, day = dir_parts[-3:]
                     date_str = f"{year}-{month}-{day}"
-                    date = datetime.strptime(date_str, "%Y-%m-%d")
+                    try:
+                        date = datetime.strptime(date_str, "%Y-%m-%d")
+                    except ValueError:
+                        continue  # 如果不能解析为日期，就跳过这个子目录
                 else:
                     date = datetime.strptime("1970-01-01", "%Y-%m-%d")  # Use a default date if no date information is available
 
