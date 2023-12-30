@@ -26,21 +26,27 @@ jobs:
         with:
           python-version: '3.11.0'
 
-      - name: Install dependencies and run script
+      - name: Configure Git
         run: |
           git config --local user.email "378600950@qq.com"
           git config --local user.name "qqhsx"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.QQNEWS_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
+
+      - name: Install dependencies
+        run: |
           pip3 install requests
           pip3 install bs4
           pip3 install html2text
-          python qq.py
-          # python index_generator.py
+
+      - name: Run script
+        run: python qq.py
+
+      - name: Commit changes
+        run: |
           git add .
-          ls -l
           git commit --allow-empty -m "spider"
-          git push -f
+          git push
 
       - name: Push images to qqnews_image repository
         run: |
