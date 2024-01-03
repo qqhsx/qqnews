@@ -69998,3 +69998,611 @@ https://new.qq.com/rain/a/20240103A0165M00
 美股收盘：道指续创新高 科技股拖累纳指跌超1% 热门中概股普跌
 https://new.qq.com/rain/a/20240103A00OOM00
 
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+中产家庭送孩子出国留学是好选择吗？孩子留学回来会过得更好吗？
+https://view.inews.qq.com/a/20240102Q07JW300
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+59岁外卖员元旦当晚倒在送餐路上，手里还紧攥着要送的外卖
+https://new.qq.com/rain/a/20240102A07GIP00
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+乡村工作能挣钱吗？北京城郊大量岗位招聘难，村里反向进城招工
+https://new.qq.com/rain/a/20240102V07PI200
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+上海一教授举报学院两任院长学术不端：前院长还要求自己给女儿改分数
+https://new.qq.com/rain/a/20240102A07HZW00
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+汽车出口倒爷们赚钱后开始售课，是不是红利期已过？现在入局还来得及吗？
+https://view.inews.qq.com/a/20240102Q02WE400
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+国内一主持人称日本地震是“报应来了”，媒体：面对天灾岂能称为报应
+https://new.qq.com/rain/a/20240102A08ID100
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+“中国芯片教父”张汝京：我这辈子就想把先进芯片制造带到大陆
+https://new.qq.com/rain/a/20240102A099E300
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+美军击毙胡塞武装人员，白宫称不寻求冲突但会自卫，美国为何不将其一举歼灭？
+https://view.inews.qq.com/a/20240102Q072VZ00
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+男子借出61万4年后无法要回，为何法律限制3年诉讼时效？钱真要不回来了？
+https://view.inews.qq.com/a/20240102Q04LAB00
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+前景不妙，白宫悄悄转变对乌战略？
+https://new.qq.com/rain/a/20240102A08FYD00
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+新年首个工作日，9人被查
+https://new.qq.com/rain/a/20240102A09F8K00
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+日本地震是报应？主持人言论引争议，海南广播电视总台：暂停其工作
+https://new.qq.com/rain/a/20240102A08N4M00
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+冯小刚：老一代不用特意迎合年轻人，和小女儿也有各自喜好互不干涉
+https://new.qq.com/rain/a/20240102V06TT700
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+刘德华陪孩子写作业也会鸡飞狗跳，孩子写作业家长该陪吗？如何正确陪？
+https://view.inews.qq.com/a/20240102Q05DX700
+
+2024-01-03 20:11:38,896 - INFO - EXPIRED
+日本7.6级地震致一7层建筑整体倾倒，为何会连根倾倒？防震建筑为何扛不住？
+https://view.inews.qq.com/a/20240102Q04LHL00
+
+2024-01-03 20:11:39,955 - ERROR - ERROR
+监拍境外炮弹落入云南边境一街道：现场多人受伤 沿街多家商铺受损 
+https://new.qq.com/rain/a/20240103V094UG00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:40,162 - INFO - EXIST
+中国人民解放军南部战区组织海空兵力位南海海域进行例行巡航
+https://new.qq.com/rain/a/20240103A09AD700
+
+2024-01-03 20:11:41,013 - ERROR - ERROR
+一提送父母去养老院他们就说我不孝，尽孝只能在家里进行吗？
+https://view.inews.qq.com/a/20240103Q008Y300
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:41,283 - INFO - EXIST
+宁夏60余人疑吃婚宴后住院 官方：初步确定为大肠杆菌和沙门氏菌感染
+https://new.qq.com/rain/a/20240103A09ROC00
+
+2024-01-03 20:11:41,492 - ERROR - ERROR
+清华大学教授刘嘉_ “GPT社区阶段”的形成，可能预示着真正的AGI涌现
+https://new.qq.com/rain/a/20240103V07TNN00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:41,847 - ERROR - ERROR
+伊朗克尔曼发生爆炸已致上百人死伤，哪方势力最有可能是幕后黑手？
+https://view.inews.qq.com/a/20240103Q09NQ100
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:42,497 - INFO - EXIST
+山西一医保中心主任被曝包养情妇、套取医保资金，涉事单位：不属实
+https://new.qq.com/rain/a/20240103A084A100
+
+2024-01-03 20:11:42,566 - ERROR - ERROR
+今天是2024地球离太阳最近一天，更容易晒黑吗？飞行、通信会受影响吗？
+https://view.inews.qq.com/a/20240103Q02RF500
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:43,276 - ERROR - ERROR
+男子被曝酒后家暴失手打死妻子，他真的是失手吗？怎么判断真醉还是装醉？
+https://view.inews.qq.com/a/20240103Q043U500
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:43,517 - INFO - EXIST
+外媒：乌克兰总统和总司令都不愿意为“再动员50万人”背锅
+https://new.qq.com/rain/a/20240103A06B8G00
+
+2024-01-03 20:11:43,699 - INFO - EXIST
+呼和浩特第一监狱2名服刑人员袭击狱警，被数罪并罚
+https://new.qq.com/rain/a/20240103A05ZTC00
+
+2024-01-03 20:11:44,076 - INFO - EXIST
+降温通知！冷空气即将逆转偏暖格局，大城市降温日历来了
+https://new.qq.com/rain/a/20240103A075BE00
+
+2024-01-03 20:11:44,451 - ERROR - ERROR
+男子业主群吐槽物业，遭多人扇嘴巴，为何很多业主和物业水火不容？
+https://view.inews.qq.com/a/20240103Q06PIQ00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:44,767 - ERROR - ERROR
+拜登被指总度假，白宫称其可在任何地方工作，他在沙滩用“企业微信”吗？
+https://view.inews.qq.com/a/20240103Q05O3H00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:45,151 - INFO - EXIST
+李强在湖北调研
+https://new.qq.com/rain/a/20240103A08K3500
+
+2024-01-03 20:11:45,494 - INFO - EXIST
+“禁鞭松绑”风口下的湖南浏阳：跨年烟花秀引4万名游客 有人赚十几万
+https://new.qq.com/rain/a/20240103A09N1U00
+
+2024-01-03 20:11:45,850 - ERROR - ERROR
+前有西安重庆，今有淄博哈尔滨，哪些城市找到了新玩法？你体验过吗？
+https://view.inews.qq.com/a/20240103Q05CGN00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:46,678 - ERROR - ERROR
+以军空袭致哈马斯领导人丧生，哈马斯有多少领导人？以色列能清除完吗？
+https://view.inews.qq.com/a/20240103Q0659F00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:46,953 - INFO - EXIST
+杭州有家长收到通知称“三孩家庭晚自修免费” 教育局：已执行近一年
+https://new.qq.com/rain/a/20240103A08HRC00
+
+2024-01-03 20:11:47,067 - INFO - EXIST
+重庆2024年房产税起征点上涨至29616元_平方米 12年间涨幅近2倍
+https://new.qq.com/rain/a/20240103A078SG00
+
+2024-01-03 20:11:47,381 - INFO - EXIST
+广东佛山一地公示“躺平休闲人员”名单，当地回应：不涉及纪法处分
+https://new.qq.com/rain/a/20240103A07YVC00
+
+2024-01-03 20:11:47,527 - INFO - EXIST
+转基因粮食获发生产经营许可，离餐桌还有多远
+https://new.qq.com/rain/a/20240103A087W400
+
+2024-01-03 20:11:48,236 - INFO - EXIST
+“拍卖土地被收回，开发商14年未获补偿”续：广西高院开庭结束，仍在调解
+https://new.qq.com/rain/a/20240103A06KR300
+
+2024-01-03 20:11:48,457 - INFO - EXIST
+福建漳州发生3.5级地震，震源深度13千米
+https://new.qq.com/rain/a/20240103A07NPL00
+
+2024-01-03 20:11:48,684 - ERROR - ERROR
+年底领导在工作群发红包，我该第一个抢还是等一会？如何高情商回复？
+https://view.inews.qq.com/a/20240103Q03MFG00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:49,061 - INFO - EXIST
+浙江中小学生艺术节多件参展作品被指抄袭 教育局：相关问题作品下架
+https://new.qq.com/rain/a/20240103A06ASD00
+
+2024-01-03 20:11:49,448 - ERROR - ERROR
+网友称房贷剩几千不还，可抵扣个税，真的管用吗？你还有什么省钱技巧？
+https://view.inews.qq.com/a/20240103Q04UWX00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:49,511 - INFO - EXIST
+江苏常州一女孩称被出租车司机猥亵，警方：已将52岁嫌疑人依法刑拘
+https://new.qq.com/rain/a/20240103A06C2V00
+
+2024-01-03 20:11:49,636 - ERROR - ERROR
+专家称中国住房14亿人都住不完，为何还要再建保障房？房子会过剩吗？
+https://view.inews.qq.com/a/20240103Q050ZQ00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:49,906 - INFO - EXIST
+2024年成品油价开局上涨，加满一箱油多花8元
+https://new.qq.com/rain/a/20240103A06H8400
+
+2024-01-03 20:11:50,051 - INFO - EXIST
+护士因送餐纠纷辱骂外卖员是社会底层 医院：涉事护士已道歉，被停职
+https://new.qq.com/rain/a/20240103A05SPX00
+
+2024-01-03 20:11:50,256 - ERROR - ERROR
+走访广州“电鸡”限行路段：外卖配送成新难题，超时退单激增
+https://new.qq.com/rain/a/20240103V063BD00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:50,480 - INFO - EXIST
+荷兰光刻机巨头阿斯麦：中国订单已全数交付
+https://new.qq.com/rain/a/20240103A03YYF00
+
+2024-01-03 20:11:50,803 - ERROR - ERROR
+美国哈佛大学校长为何上任不到半年辞职？剽窃丑闻和反犹言论哪个是主因？
+https://view.inews.qq.com/a/20240103Q01RQU00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:51,104 - ERROR - ERROR
+国民老公彭于晏：拍打戏是真打，导演准备了200个瓶子专门用来砸我
+https://new.qq.com/rain/a/20240103V04RGV00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:51,646 - INFO - EXIST
+阿根廷发生5.5级地震
+https://new.qq.com/rain/a/20240103A065F300
+
+2024-01-03 20:11:51,793 - INFO - EXIST
+劳动者不了解、政策不明确，“低温津贴”落实难
+https://new.qq.com/rain/a/20240103A05WAF00
+
+2024-01-03 20:11:52,365 - INFO - EXIST
+律师追问2.2亿彩票事件二十余天无回复，称“一拳打在了棉花上”
+https://new.qq.com/rain/a/20240103A058TS00
+
+2024-01-03 20:11:52,815 - ERROR - ERROR
+演员郝劭文妻子称女儿遭校园霸凌 官方：多部门已开展调查 将依法处置
+https://new.qq.com/rain/a/20240103V066EW00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:53,169 - INFO - EXIST
+购买华为手机必须现场拆封激活？华为官方：将处罚相关门店及负责人
+https://new.qq.com/rain/a/20240103A03UAI00
+
+2024-01-03 20:11:53,614 - ERROR - ERROR
+日本北九州闹市发生火灾 火势难挡蔓延周边多栋建筑 浓烟冲天而起
+https://new.qq.com/rain/a/20240103V05OTC00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:54,912 - INFO - EXIST
+“四川主播为粉丝跨省取有毒快递被判无期”案 1月4日将重审二审开庭
+https://new.qq.com/rain/a/20240103A04NBO00
+
+2024-01-03 20:11:56,156 - ERROR - ERROR
+这个冬天，为什么是哈尔滨坐上“东北网红一哥”的位子？当地怎么运作的？
+https://view.inews.qq.com/a/20240103Q04T3Z00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:56,173 - INFO - EXIST
+专访驻法大使卢沙野：法中两国有着相同的“脾气”，都是“弄潮儿”
+https://new.qq.com/rain/a/20240103A05T3F00
+
+2024-01-03 20:11:56,685 - ERROR - ERROR
+广东汕头两人骑摩托车向沿途路人放烟花 警方：已将2名未成年人抓获
+https://new.qq.com/rain/a/20240103V0581U00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:11:57,252 - INFO - EXIST
+被双开的中信建投原总经理，年少成名，34岁就已执掌一线券商
+https://new.qq.com/rain/a/20240103A04U8S00
+
+2024-01-03 20:11:57,828 - INFO - EXIST
+男子公园门口捅伤陌生女子后跳楼身亡，受害者家属：希望追究园方责任
+https://new.qq.com/rain/a/20240103A04KO500
+
+2024-01-03 20:11:57,835 - INFO - EXIST
+A股收评：沪指震荡反弹涨0.17%创业板指跌超1%，煤炭行业涨幅居前
+https://new.qq.com/rain/a/20240103A058QU00
+
+2024-01-03 20:11:58,665 - INFO - EXIST
+《咬文嚼字》发布十大语文差错，“多巴胺”和“卡脖子”到底怎么念
+https://new.qq.com/rain/a/20240103A04VT900
+
+2024-01-03 20:12:00,496 - INFO - EXIST
+网络谣言“温州帮竟然是缅北电诈的后台”怎么出台的？警方披露内情
+https://new.qq.com/rain/a/20240103A0257C00
+
+2024-01-03 20:12:00,621 - INFO - EXIST
+与懂车帝等平台停止合作？华为回应：新价格谈拢前暂缓部分合作
+https://new.qq.com/rain/a/20240103A0415500
+
+2024-01-03 20:12:00,716 - INFO - EXIST
+一个“小偷”，想办身份证
+https://new.qq.com/rain/a/20240103A04MEE00
+
+2024-01-03 20:12:01,321 - INFO - EXIST
+2023年我国最热和最冷纪录均被刷新：最低零下53℃，最高52.2℃
+https://new.qq.com/rain/a/20240103A034YI00
+
+2024-01-03 20:12:02,192 - INFO - EXIST
+陕西一男子在业主群“吐槽”物业，遭数人上门连扇嘴巴？警方介入调查
+https://new.qq.com/rain/a/20240103A02XR200
+
+2024-01-03 20:12:02,219 - ERROR - ERROR
+首都被以军空袭，黎巴嫩除了向联合国投诉还能干什么？会和以色列全面开战吗？
+https://view.inews.qq.com/a/20240103Q01E1H00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:12:02,581 - INFO - EXIST
+2024年首个“不眠夜”：今晚美联储纪要会给降息预期泼冷水吗
+https://new.qq.com/rain/a/20240103A057WZ00
+
+2024-01-03 20:12:02,936 - INFO - EXIST
+扒衣服烫烟头……湖南一初中女生对同学3次施暴 因不满14周岁未被处罚
+https://new.qq.com/rain/a/20240103A02ZL300
+
+2024-01-03 20:12:03,408 - ERROR - ERROR
+大陆船只回呛台湾“海巡署”：别老是你国你国的 台湾省就是台湾省
+https://new.qq.com/rain/a/20240103V01CQH00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:12:03,425 - ERROR - ERROR
+你跟他讲道理，他跟你讲伦理，为什么总有父母一张口就让人扫兴？
+https://view.inews.qq.com/a/20240103Q02D2S00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:12:03,464 - INFO - EXIST
+华为手机产能爬坡：Mate60供货提升，低端机不出5G版
+https://new.qq.com/rain/a/20240103A01NGO00
+
+2024-01-03 20:12:04,015 - INFO - EXIST
+2023年以来铁路公安解救被拐妇女和未成年人300余人
+https://new.qq.com/rain/a/20240103A02ZHP00
+
+2024-01-03 20:12:04,291 - INFO - EXIST
+铁路12306手机客户端推出购票需求预填、起售提醒订阅两项新功能 
+https://new.qq.com/rain/a/20240103A01VYM00
+
+2024-01-03 20:12:05,427 - ERROR - ERROR
+曝西安某公司为裁员搬进山区，你还见过企业哪些变相裁员的奇葩操作？
+https://view.inews.qq.com/a/20240103Q00VTD00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:12:05,442 - INFO - EXIST
+美“福特”号航母计划离开中东，以媒担忧：对以来说不是好兆头
+https://new.qq.com/rain/a/20240103A00LVI00
+
+2024-01-03 20:12:06,488 - INFO - EXIST
+中央部署后，韩文秀、郑栅洁、金壮龙、蓝佛安密集发声，释放重要信号
+https://new.qq.com/rain/a/20240103A00YPR00
+
+2024-01-03 20:12:06,570 - INFO - EXIST
+台湾花莲县发生4.5级地震
+https://new.qq.com/rain/a/20240103A02NPI00
+
+2024-01-03 20:12:06,626 - INFO - EXIST
+元旦烟花秀后内地游客滞留香港一夜，梁振英建议延长两地通关时间
+https://new.qq.com/rain/a/20240103A00MGJ00
+
+2024-01-03 20:12:06,949 - ERROR - ERROR
+NBA大数据｜甩无私包袱！哈登四项高阶数据生涯最高 快船手握争冠秘诀
+https://new.qq.com/rain/a/20240103V02KPK00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:12:07,103 - INFO - EXIST
+网易游戏宣布全线产品增设未成年人模式，首批34款试点产品已部署完成
+https://new.qq.com/rain/a/20240103A02FAD00
+
+2024-01-03 20:12:07,209 - INFO - EXIST
+关键讯号出现了，郭台铭会出手帮侯？
+https://new.qq.com/rain/a/20240103A01JTO00
+
+2024-01-03 20:12:07,370 - INFO - EXIST
+美国超越澳大利亚和卡塔尔成为全球最大液化天然气出口国
+https://new.qq.com/rain/a/20240103A00WME00
+
+2024-01-03 20:12:07,495 - INFO - EXIST
+菲律宾证券交易所称交易已暂停
+https://new.qq.com/rain/a/20240103A020QY00
+
+2024-01-03 20:12:07,691 - INFO - EXIST
+以色列空袭黎巴嫩首都，哈马斯政治局副主席在袭击中丧生
+https://new.qq.com/rain/a/20240103A012LE00
+
+2024-01-03 20:12:07,859 - ERROR - ERROR
+美纽约州男子驾车冲人致2死5伤：警方从车内及周边发现十几个汽油罐
+https://new.qq.com/rain/a/20240103V00MEV00
+('list index out of range',)
+======
+Traceback (most recent call last):
+  File "/home/runner/work/qqnews/qqnews/qq.py", line 77, in process_article
+    ss = str(tmpbs.select("div.LEFT div.content.clearfix")[0])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+
+2024-01-03 20:12:08,707 - INFO - EXIST
+中国游泳队公布世锦赛名单：张雨霏汪顺覃海洋缺席，16岁超新星抢眼
+https://new.qq.com/rain/a/20240103A036S700
+
+2024-01-03 20:12:08,727 - INFO - EXIST
+华为余承东内部信曝光：没有等出来的未来，只有闯出来的明天
+https://new.qq.com/rain/a/20240103A019FO00
+
+2024-01-03 20:12:09,026 - INFO - EXIST
+威马汽车预重整转重整：正面临流动性危机，仍具备一定的价值和潜力
+https://new.qq.com/rain/a/20240103A01TJL00
+
+2024-01-03 20:12:09,494 - INFO - EXIST
+内蒙古一高校干部被曝酒后家暴失手打死妻子，警方：嫌疑人已被刑拘
+https://new.qq.com/rain/a/20240103A00HE700
+
+2024-01-03 20:12:09,730 - INFO - EXIST
+澳自行车赛世界冠军被丈夫开车“撞死”，澳奥委会发声：感到悲痛
+https://new.qq.com/rain/a/20240103A00MD700
+
+2024-01-03 20:12:09,907 - INFO - INVALID
+特朗普对缅因州取消其党内初选资格的裁决提出上诉
+https://new.qq.com/rain/a/20240103A00KR400
+
+2024-01-03 20:12:09,979 - INFO - EXIST
+印尼龙目岛南部海域发生5.9级地震
+https://new.qq.com/rain/a/20240103A01MYX00
+
+2024-01-03 20:12:10,840 - INFO - EXIST
+日本东京秋叶原车站一列车内发生持刀伤人事件 部分线路暂停运营
+https://new.qq.com/rain/a/20240103A09S3S00
+
+2024-01-03 20:12:12,280 - INFO - EXIST
+哈佛大学校长辞职，任期史上最短
+https://new.qq.com/rain/a/20240103A0165M00
+
+2024-01-03 20:12:12,357 - INFO - EXIST
+中证A50将迎指数基金大建仓，10家基金新年开赛，引三个A50重新竞跑
+https://new.qq.com/rain/a/20240103A01HH600
+
+2024-01-03 20:12:16,273 - INFO - EXIST
+美股收盘：道指续创新高 科技股拖累纳指跌超1% 热门中概股普跌
+https://new.qq.com/rain/a/20240103A00OOM00
+
